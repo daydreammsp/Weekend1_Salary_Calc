@@ -1,21 +1,11 @@
 .formInfo{
   font-size: 20px;
+  width: 20%;
 }
-.formInfo1{
-  font-size: 50px;
-}
-.formInfo2{
-  font-size: 50px;
-}
-.formInfo3{
-  font-size: 50px;
-}
-.formInfo4{
-  font-size: 50px;
-}
-.formInfo5{
-  font-size: 50px;
-}
+/* .formInput{
+  width: 100%;
+} */
+
 .totalField{
 
   font-size: 100px;
