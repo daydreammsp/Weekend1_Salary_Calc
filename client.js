@@ -3,7 +3,7 @@ $(document).ready(readyNow);
 function readyNow(){
   console.log('js ready');
 let total;
-let total1;
+let total1 = [];
 let salArr = [];
 
 class Employee{
@@ -20,11 +20,31 @@ class Employee{
 
 
   $(".submit").on('click', submitClick);
-      $("#inputFields").on('click','.remCF',function(){
-          $(this).parent().parent().remove();
+
+
+      $("#inputFields").on('click','.remove1',function(){
+          $(this).parent().parent().remove().removeData();
           // $('.totalField').empty();
+          // $('.totalField').append(total2, "<br class='formInfo5'>");
+
+          });
+
+
+//           $( '.formInfoSal' ).each(function( index ) {
+//                let x =  parseInt($( this ).text()) ;
+//
+//
+//                console.log(x);
+//
+// });
+
+// $('.totalField').append(total1, "<br class='formInfo5'>");
+
+        // let y =  $(x).text()
+          // console.log(total1);
+
           // $('.totalField').append(total1, "<br class='formInfo5'>");
-      });
+
 
 
 
@@ -44,12 +64,10 @@ class Employee{
 
   }
 
-  function sum(a, b) {
-      return parseInt(a) + parseInt(b);
-  }
 
 
-  $("#inputFields").append('<tr valign="top"><th scope="row"><label for="customFieldName"></label></th><td class="formInfo">&nbsp;' + firstN + '&nbsp;<td class="formInfo">' + lastN + '</td> &nbsp;<td class="formInfo">' + empId + '</td>  &nbsp;<td class="formInfo">' + jobT + '</td> &nbsp;<td class="formInfoSal">' + sal + '</td> &nbsp;<td class="formInfo"> <a href="javascript:void(0);" class="remCF">Remove</a></td></tr>');
+
+  $("#inputFields").append('<tr valign="top"><th scope="row"><label for="customFieldName"></label></th><td class="formInfo">&nbsp;' + firstN + '&nbsp;<td class="formInfo">' + lastN + '</td> &nbsp;<td class="formInfo">' + empId + '</td>  &nbsp;<td class="formInfo">' + jobT + '</td> &nbsp;<td class="formInfoSal">' + sal + '</td> &nbsp;<td class="formInfo"> <a href="javascript:void(0);" class="remove1">Remove</a></td></tr>');
 
 
 
@@ -62,10 +80,15 @@ class Employee{
       // console.log(data);
     $('.totalField').empty();
     $('.totalField').append(total, "<br class='formInfo5'>");
+    $('.firstName, .lastName, .idNumber, .jobTitle, .salary').append().val('');
 
 
   }
-
-
+  function sum(a, b) {
+      return parseInt(a) + parseInt(b);
+  }
+  function sum1(a, b) {
+      return parseInt(a) - parseInt(b);
+  }
 
 }

@@ -1,23 +1,62 @@
+.header{
+  padding: 20px;
+  font-size: 40px;
+  text-align: center;
+  background-color: #FF5733;
+}
+
 .formInfo{
-  font-size: 20px;
+  padding: 5px;
+  background-color: pink;
+  text-align: center;
+  font-size: 30px;
   width: 15%;
+  color: white;
 }
 .formInfoSal{
-  font-size: 20px;
+  font-size: 30px;
   width: 15%;
+  color: black;
+  background-color: pink;
 }
-/* .formInput{
+.firstName{
+  font-size: 15px;
+  background-color: ivory;
+}
+.lastName{
+  font-size: 15px;
+  background-color: ivory;
+}
+.idNumber{
+  font-size: 15px;
+  background-color: ivory;
+}
+.jobTitle{
+  font-size: 15px;
+  background-color: ivory;
+}
+.salary{
+  font-size: 15px;
+  background-color: ivory;
+}
+.form-table{
+  padding: 10px;
   width: 100%;
-} */
-
-.totalField{
-
-  font-size: 100px;
+  background-color: #F29783;
 }
-.removeB{
-  color: red;
-  font-size: 10px;
+.totalField{
+  text-align: center;
+  min-width: 20%;
+  float: right;
+  font-size: 40px;
+}
+.total{
+  border-radius: 20px;
+  padding: 10px;
+  float: right;
+  font-size: 30px;
+  background-color: #808080;
 }
 .remove1{
-
+color: #D8C66F;
 }
