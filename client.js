@@ -73,7 +73,7 @@ function readyNow(){
       console.log(t);
     });
 
-    $('.totalField').append("$"+" "+ t +"<br class='formInfo5'>");
+    $('.totalField').append("$"+" "+ t.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +"<br class='formInfo5'>");
   }
 
   function background(){
