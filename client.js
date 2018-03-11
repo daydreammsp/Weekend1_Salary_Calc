@@ -44,7 +44,7 @@ function readyNow(){
     let jobT = $('.jobTitle').val();
     let sal = $('.salary').val();
     let empInfo = [firstN, lastN, empId, jobT, sal];
-    $("#inputFields").append('<tr valign="top"><th scope="row"><label for="customFieldName"></label></th><td class="formInfo">&nbsp;' + firstN + '&nbsp;<td class="formInfo">' + lastN + '</td> &nbsp;<td class="formInfo">' + empId + '</td>  &nbsp;<td class="formInfo">' + jobT + '</td> &nbsp;<td class="formInfoSal">' + sal + '</td> &nbsp;<td class="formInfo"> <a href="javascript:void(0);" class="remove1">Remove</a></td></tr>');
+    $("#inputFields").append('<tr valign="top"><th scope="row"></label></th><td class="formInfo">&nbsp;' + firstN + '&nbsp;<td class="formInfo">' + lastN + '</td> &nbsp;<td class="formInfo">' + empId + '</td>  &nbsp;<td class="formInfo">' + jobT + '</td> &nbsp;<td class="formInfoSal">' + sal + '</td> &nbsp;<td class="formInfo"> <a href="javascript:void(0);" class="remove1">Remove</a></td></tr>');
     $('.totalField').empty();
     remove();
     background();
@@ -94,5 +94,6 @@ function readyNow(){
       }
     });
   }
+
 
 }
