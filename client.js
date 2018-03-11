@@ -2,13 +2,31 @@ $(document).ready(readyNow);
 
 function readyNow(){
   console.log('js ready');
+let total;
+let total1;
+let salArr = [];
+
+class Employee{
+  constructor(first,last,empNum,jobTi,salary){
+    this.first = first;
+    this.last = last;
+    this.empNum = empNum;
+    this.jobTi = jobTi;
+    this.salary = salary;
+
+  }
+}
+
+
 
   $(".submit").on('click', submitClick);
       $("#inputFields").on('click','.remCF',function(){
           $(this).parent().parent().remove();
+          // $('.totalField').empty();
+          // $('.totalField').append(total1, "<br class='formInfo5'>");
       });
 
-let salArr = [];
+
 
   function submitClick(){
 
@@ -18,21 +36,20 @@ let salArr = [];
     let jobT = $('.jobTitle').val();
     let sal = $('.salary').val();
     let empInfo = [firstN, lastN, empId, jobT, sal];
-    console.log(empInfo);
     salArr.push(sal);
-let total = salArr.reduce(getSum);
+    total = salArr.reduce(sum);
 
-console.log(total)
   for(let x of salArr){
     let y = x++;
-    console.log(y)
+
   }
 
-  function getSum(a, b) {
+  function sum(a, b) {
       return parseInt(a) + parseInt(b);
   }
 
-  $("#inputFields").append('<tr valign="top"><th scope="row"><label for="customFieldName"></label></th><td class="formInfo">&nbsp;' + firstN + '&nbsp;<td class="formInfo">' + lastN + '</td> &nbsp;<td class="formInfo">' + empId + '</td>  &nbsp;<td class="formInfo">' + jobT + '</td> &nbsp;<td class="formInfo">' + sal + '</td> &nbsp;<td class="formInfo"> <a href="javascript:void(0);" class="remCF">Remove</a></td></tr>');
+
+  $("#inputFields").append('<tr valign="top"><th scope="row"><label for="customFieldName"></label></th><td class="formInfo">&nbsp;' + firstN + '&nbsp;<td class="formInfo">' + lastN + '</td> &nbsp;<td class="formInfo">' + empId + '</td>  &nbsp;<td class="formInfo">' + jobT + '</td> &nbsp;<td class="formInfoSal">' + sal + '</td> &nbsp;<td class="formInfo"> <a href="javascript:void(0);" class="remCF">Remove</a></td></tr>');
 
 
 
@@ -43,16 +60,12 @@ console.log(total)
     // $('.numberT').append(sal, "<th class='formInfo5'></th>");
     // $('.remove1').append("<button class='removeB'>Remove</button><br><br><br");
       // console.log(data);
-    // $('.totalField').empty();
-    // $('.totalField').append(total, "<br class='formInfo5'>");
+    $('.totalField').empty();
+    $('.totalField').append(total, "<br class='formInfo5'>");
 
 
   }
 
-  // function removeButton(){
-  //   console.log('hi')
-  //   $().closest('tr').empty();
-  //
-  // }
+
 
 }
