@@ -79,10 +79,10 @@ function readyNow(){
   function background(){
     console.log('hi')
     if(t > 20000){
-      $('.total').css('background-color', 'red');
+      $('.totalField').css('border-color', 'red');
     }
     else{
-      $('.total').css('background-color', 'white')
+      $('.totalField').css('border-color', 'black')
     }
 
   }
