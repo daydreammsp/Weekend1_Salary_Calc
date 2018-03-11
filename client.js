@@ -36,7 +36,7 @@ class Employee{
            $('.totalField').empty();
            remove();
            //$('.formInfoSal').removeData(employees)
-
+           background();
           });
 
 
@@ -84,7 +84,7 @@ h = [];
       // }
 
     // $('.totalField').append(total, "<br class='formInfo5'>");
-
+ background();
     $('.firstName, .lastName, .idNumber, .jobTitle, .salary').append().val('');
 newEmp ();
 function newEmp (){
@@ -137,9 +137,13 @@ function remove(){
 $('.totalField').append(t, "<br class='formInfo5'>");
 }
 function background(){
+  console.log('hi')
   if(t > 20000){
     $('.total').css('background-color', 'red');
 
+  }
+  else{
+    $('.total').css('background-color', '#808080')
   }
 }
 
