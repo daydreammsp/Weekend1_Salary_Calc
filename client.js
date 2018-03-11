@@ -11,7 +11,7 @@ let t = 0;
 
 function readyNow(){
   console.log('js ready');
-
+disableButton();
 
 class Employee{
   constructor(first,last,empNum,jobTi,salary){
@@ -30,6 +30,7 @@ class Employee{
 
 
       $("#inputFields").on('click','.remove1',function(){
+        disableButton();
         h = [];
         t = 0;
           $(this).parent().parent().remove().removeData();
@@ -53,6 +54,7 @@ class Employee{
 
 
   function submitClick(){
+    disableButton();
 // let total = 0;
 // salArr =[];
 h = [];
@@ -145,6 +147,15 @@ function background(){
   else{
     $('.total').css('background-color', '#808080')
   }
+
 }
+function disableButton() {
+   $('button').prop('disabled', true);
+   $('.salary').keyup(function() {
+      if($(this).val() != '') {
+         $('button').prop('disabled', false);
+      }
+   });
+ };
 
 }
