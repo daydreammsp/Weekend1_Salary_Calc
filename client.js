@@ -6,6 +6,7 @@ let r = [];
 let m;
 let h = [];
 let salArr = [];
+let t = 0;
 
 
 function readyNow(){
@@ -30,7 +31,7 @@ class Employee{
 
       $("#inputFields").on('click','.remove1',function(){
         h = [];
-        let t = 0;
+        t = 0;
           $(this).parent().parent().remove().removeData();
            $('.totalField').empty();
            remove();
@@ -55,7 +56,7 @@ class Employee{
 // let total = 0;
 // salArr =[];
 h = [];
-let t = 0;
+ t = 0;
     let firstN = $('.firstName').val();
     let lastN = $('.lastName').val();
     let empId = $('.idNumber').val();
@@ -134,6 +135,12 @@ function remove(){
 
 });
 $('.totalField').append(t, "<br class='formInfo5'>");
+}
+function background(){
+  if(t > 20000){
+    $('.total').css('background-color', 'red');
+
+  }
 }
 
 }
