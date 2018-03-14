@@ -28,7 +28,7 @@ function readyNow(){
     disableButton();
     h = [];
     t = 0;
-    $(this).parent().parent().remove().removeData();
+    $(this).parent().parent().remove();
     $('.totalField').empty();
     remove();
     background();
